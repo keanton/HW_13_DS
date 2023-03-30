@@ -1,7 +1,7 @@
 class Node:
     """Класс для узла стека"""
 
-    def __init__(self, data, next_node):
+    def __init__(self, data, next_node=None):
         """
         Конструктор класса Node
 
@@ -14,11 +14,11 @@ class Node:
 class Stack:
     """Класс для стека"""
 
-    def __init__(self):
+    def __init__(self, top=None):
         """Конструктор класса Stack"""
         self.top = top
 
-    def push(self, value):
+    def push(self, value) -> None:
         """
         Метод для добавления элемента на вершину стека
 
