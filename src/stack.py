@@ -31,11 +31,30 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        pass
+        removed_node = self.top
+        self.top = self.top.next_node
+        return removed_node.data
 
 
 stack = Stack()
 stack.push('data1')
+data = stack.pop()
+
+# стэк стал пустой
+print(stack.top)
+
+# pop() удаляет элемент и возвращает данные удаленного элемента
+print(data)
+
+stack = Stack()
+stack.push('data1')
 stack.push('data2')
-stack.push('data3')
-print(stack)
+data = stack.pop()
+
+# теперь последний элемента содержит данные data1
+print(stack.top.data)
+# 'data1'
+
+# данные удаленного элемента
+print(data)
+
