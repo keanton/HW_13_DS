@@ -32,8 +32,11 @@ class Stack:
         :return: данные удаленного элемента
         """
         removed_node = self.top
+        if not removed_node:
+            return None
         self.top = self.top.next_node
         return removed_node.data
+
 
 
 stack = Stack()
